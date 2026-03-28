@@ -1,0 +1,39 @@
+RAG (Retrieval-Augmented Generation) — Basics Introduction
+
+RAG is a technique in AI / NLP where a language model (LLM) doesn’t rely only on its training data, but also retrieves relevant information from external sources (like documents, PDFs, databases) before generating an answer.
+
+🧠 Simple Idea
+
+👉 Instead of “just guessing from memory,” the model:
+
+Searches for relevant data
+Uses that data to generate a better answer
+
+⚙️ How RAG Works (Step-by-Step)
+
+1. 📄 Data Ingestion
+
+Load documents (PDFs, text files, websites)
+Example tools: PyPDFLoader, WebBaseLoader
+2. ✂️ Text Splitting
+
+Break large documents into small chunks
+Why? LLMs handle smaller context better
+3. 🔢 Embeddings
+Convert text → numerical vectors
+Captures meaning (semantic understanding)
+
+👉 Example:
+
+"AI is powerful" ≈ "Artificial Intelligence is strong"
+4. 🗄️ Vector Database
+Store embeddings in databases like:
+FAISS
+Chroma
+Pinecone
+5. 🔍 Retrieval
+User asks a question
+System finds most relevant chunks using similarity search
+6. 🤖 Generation (LLM)
+Retrieved data + user question → sent to LLM
+LLM generates accurate, context-aware answer
